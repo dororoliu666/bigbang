@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.tool {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tool img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.tool h3 {
+    margin: 0 0 5px 0;
+}
+
+.tool a {
+    margin-right: 10px;
+}
+
+.rating-input {
+    width: 60px;
+}
