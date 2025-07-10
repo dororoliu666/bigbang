@@ -6,6 +6,8 @@ This repository contains a static website for browsing AI tools. Tools can be fi
 
 The dataset now lists fifteen popular AI tools, including several Chinese options. Each entry includes the company behind the tool, its country (shown with a flag), the year it was created, the current version, and an embedded logo so images never break. When scraping new data the script tries to fetch each tool's logo from the website and falls back to a generated SVG placeholder if needed.
 
+The interface adopts a Dribbble-inspired pink theme for a cleaner, more modern look.
+
 Open `index.html` in your browser to use the site. The layout is responsive and uses a grid of cards for each tool. Hover over a card to reveal a "去体验" button and click anywhere on the card to visit the tool. 左侧导航和分类标签均为中文，导航在 **首页** 与 **我常用的** 之间切换，后者会显示你最近访问过的工具。
 
 Tool data is stored in `tools.json`. You can refresh this file by scraping [ai-bot.cn](https://ai-bot.cn) using the provided Node script:
