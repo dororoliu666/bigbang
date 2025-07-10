@@ -11,7 +11,7 @@ const defaultTools = [
         version: '4',
         country: '🇺🇸 US',
         created: '2022',
-        category: 'Chatbot',
+        category: '聊天',
         logo: generateLogo('CG'),
         description: "OpenAI's conversational AI.",
         link: 'https://openai.com'
@@ -23,7 +23,7 @@ const defaultTools = [
         version: '3',
         country: '🇺🇸 US',
         created: '2023',
-        category: 'Image Generation',
+        category: '图像生成',
         logo: generateLogo('DE'),
         description: 'Image generation from text prompts.',
         link: 'https://openai.com/dall-e-3'
@@ -33,7 +33,7 @@ const defaultTools = [
         name: 'Stable Diffusion',
         company: 'Stability AI',
         version: '1.5',
-        category: 'Image Generation',
+        category: '图像生成',
         country: '🇬🇧 UK',
         created: '2022',
         logo: generateLogo('SD'),
@@ -45,7 +45,7 @@ const defaultTools = [
         name: 'Midjourney',
         company: 'Midjourney',
         version: '5',
-        category: 'Image Generation',
+        category: '图像生成',
         country: '🇺🇸 US',
         created: '2022',
         logo: generateLogo('MJ'),
@@ -57,7 +57,7 @@ const defaultTools = [
         name: 'Bard',
         company: 'Google',
         version: '2',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇺🇸 US',
         created: '2023',
         logo: generateLogo('BA'),
@@ -69,7 +69,7 @@ const defaultTools = [
         name: 'GitHub Copilot',
         company: 'GitHub',
         version: '1.0',
-        category: 'Coding Assistant',
+        category: '编码助手',
         country: '🇺🇸 US',
         created: '2021',
         logo: generateLogo('GP'),
@@ -81,7 +81,7 @@ const defaultTools = [
         name: 'Adobe Firefly',
         company: 'Adobe',
         version: 'beta',
-        category: 'Image Generation',
+        category: '图像生成',
         country: '🇺🇸 US',
         created: '2023',
         logo: generateLogo('FF'),
@@ -93,7 +93,7 @@ const defaultTools = [
         name: 'Whisper',
         company: 'OpenAI',
         version: '1.0',
-        category: 'Speech Recognition',
+        category: '语音识别',
         country: '🇺🇸 US',
         created: '2022',
         logo: generateLogo('WH'),
@@ -105,7 +105,7 @@ const defaultTools = [
         name: 'Claude',
         company: 'Anthropic',
         version: '2',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇺🇸 US',
         created: '2023',
         logo: generateLogo('CL'),
@@ -117,7 +117,7 @@ const defaultTools = [
         name: 'Perplexity AI',
         company: 'Perplexity',
         version: '1.0',
-        category: 'Search',
+        category: '搜索',
         country: '🇺🇸 US',
         created: '2022',
         logo: generateLogo('PX'),
@@ -129,7 +129,7 @@ const defaultTools = [
         name: '文心一言',
         company: 'Baidu',
         version: '4.0',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇨🇳 CN',
         created: '2023',
         logo: generateLogo('EB'),
@@ -141,7 +141,7 @@ const defaultTools = [
         name: '通义千问',
         company: 'Alibaba',
         version: '2.0',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇨🇳 CN',
         created: '2023',
         logo: generateLogo('QW'),
@@ -153,7 +153,7 @@ const defaultTools = [
         name: '讯飞星火',
         company: 'iFlytek',
         version: '2.0',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇨🇳 CN',
         created: '2023',
         logo: generateLogo('SP'),
@@ -165,7 +165,7 @@ const defaultTools = [
         name: '商汤日日新',
         company: 'SenseTime',
         version: '1.0',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇨🇳 CN',
         created: '2023',
         logo: generateLogo('SC'),
@@ -177,7 +177,7 @@ const defaultTools = [
         name: '360 智脑',
         company: '360',
         version: '1.0',
-        category: 'Chatbot',
+        category: '聊天',
         country: '🇨🇳 CN',
         created: '2023',
         logo: generateLogo('36'),
@@ -254,22 +254,22 @@ function createToolCard(tool) {
 
     const company = document.createElement('p');
     company.className = 'meta';
-    company.textContent = `Company: ${tool.company}`;
+    company.textContent = `公司: ${tool.company}`;
     info.appendChild(company);
 
     const country = document.createElement('p');
     country.className = 'meta';
-    country.textContent = `Country: ${tool.country}`;
+    country.textContent = `国家: ${tool.country}`;
     info.appendChild(country);
 
     const version = document.createElement('p');
     version.className = 'meta';
-    version.textContent = `Version: ${tool.version}`;
+    version.textContent = `版本: ${tool.version}`;
     info.appendChild(version);
 
     const created = document.createElement('p');
     created.className = 'meta';
-    created.textContent = `Created: ${tool.created}`;
+    created.textContent = `创建时间: ${tool.created}`;
     info.appendChild(created);
 
     const desc = document.createElement('p');
@@ -323,7 +323,7 @@ function renderCategoryTags() {
         const tag = document.createElement('span');
         tag.className = 'category-tag';
         tag.dataset.category = cat;
-        tag.textContent = '#' + (cat || 'All');
+        tag.textContent = '#' + (cat || '全部');
         tag.addEventListener('click', () => {
             selectedCategory = cat;
             document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
@@ -332,7 +332,7 @@ function renderCategoryTags() {
         });
         container.appendChild(tag);
     });
-    // Set first tag (All) active by default
+    // Set first tag (全部) active by default
     const first = container.querySelector('.category-tag');
     if (first) first.classList.add('active');
 }
