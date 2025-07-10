@@ -246,6 +246,7 @@ function renderTools() {
             div.appendChild(img);
 
             const info = document.createElement('div');
+            info.className = 'tool-info';
             const title = document.createElement('h3');
             title.textContent = tool.name;
             info.appendChild(title);
@@ -284,22 +285,23 @@ function renderTools() {
             const ratingContainer = document.createElement('div');
             ratingContainer.className = 'rating-container';
 
-            const rating = document.createElement('input');
-            rating.type = 'range';
-            rating.min = 0;
-            rating.max = 100;
-            rating.value = tool.rating || 0;
-            rating.className = 'rating-slider';
-            rating.addEventListener('input', () => {
-                ratingDisplay.textContent = rating.value + ' %';
-            });
-            rating.addEventListener('change', () => saveRating(tool, rating.value));
-            ratingContainer.appendChild(rating);
-
             const ratingDisplay = document.createElement('span');
             ratingDisplay.className = 'rating-value';
             ratingDisplay.textContent = (tool.rating || 0) + ' %';
             ratingContainer.appendChild(ratingDisplay);
+
+            const rateBtn = document.createElement('button');
+            rateBtn.textContent = '评分';
+            rateBtn.className = 'rate-btn';
+            rateBtn.addEventListener('click', () => {
+                const value = prompt('请输入评分(0-100)：', tool.rating || '0');
+                const num = parseInt(value, 10);
+                if (!isNaN(num) && num >= 0 && num <= 100) {
+                    saveRating(tool, num);
+                    ratingDisplay.textContent = num + ' %';
+                }
+            });
+            ratingContainer.appendChild(rateBtn);
 
             info.appendChild(ratingContainer);
 
