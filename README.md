@@ -2,7 +2,7 @@
 
 专为设计师提供的AI 工具导航
 
-This repository contains a static website for browsing AI tools. Tools can be filtered by category, searched by name or description, and rated on a 0–100 scale using a slider. Ratings are stored locally in your browser using `localStorage`.
+This repository contains a static website for browsing AI tools. Tools can be filtered by clicking hashtag-style categories, searched by name or description, and rated on a 0–100 scale using a slider. Ratings are stored locally in your browser using `localStorage`.
 
 The dataset now lists ten popular AI tools. Each entry includes the company behind the tool, its current version, and an embedded logo so images never break.
 

@@ -124,21 +124,35 @@ function getCategories() {
     return Array.from(cats);
 }
 
-function renderCategoryOptions() {
-    const select = document.getElementById('category-filter');
-    getCategories().forEach(cat => {
-        const opt = document.createElement('option');
-        opt.value = cat;
-        opt.textContent = cat;
-        select.appendChild(opt);
+let selectedCategory = '';
+
+function renderCategoryTags() {
+    const container = document.getElementById('category-tags');
+    container.innerHTML = '';
+    const categories = [''].concat(getCategories());
+    categories.forEach(cat => {
+        const tag = document.createElement('span');
+        tag.className = 'category-tag';
+        tag.dataset.category = cat;
+        tag.textContent = '#' + (cat || 'All');
+        tag.addEventListener('click', () => {
+            selectedCategory = cat;
+            document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+            tag.classList.add('active');
+            renderTools();
+        });
+        container.appendChild(tag);
     });
+    // Set first tag (All) active by default
+    const first = container.querySelector('.category-tag');
+    if (first) first.classList.add('active');
 }
 
 function renderTools() {
     const container = document.getElementById('tools-container');
     container.innerHTML = '';
     const search = document.getElementById('search').value.toLowerCase();
-    const category = document.getElementById('category-filter').value;
+    const category = selectedCategory;
 
     tools
         .filter(t => (!category || t.category === category))
@@ -205,8 +219,7 @@ function renderTools() {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadRatings();
-    renderCategoryOptions();
+    renderCategoryTags();
     renderTools();
     document.getElementById("search").addEventListener("input", renderTools);
-    document.getElementById("category-filter").addEventListener("change", renderTools);
 });

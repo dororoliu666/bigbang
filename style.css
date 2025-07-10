@@ -26,6 +26,27 @@ body {
     margin-bottom: 20px;
 }
 
+.category-tags {
+    margin-bottom: 20px;
+}
+
+.category-tag {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #e6e6e6;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #0066cc;
+    font-size: 0.9em;
+}
+
+.category-tag.active {
+    background: #0066cc;
+    color: #fff;
+}
+
 .controls input,
 .controls select {
     padding: 8px;
