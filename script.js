@@ -230,6 +230,10 @@ let selectedCategory = '';
 function createToolCard(tool) {
     const div = document.createElement('div');
     div.className = 'tool';
+    div.addEventListener('click', () => {
+        window.open(tool.link, '_blank');
+        markVisited(tool);
+    });
 
     const img = document.createElement('img');
     img.src = tool.logo;
@@ -271,7 +275,10 @@ function createToolCard(tool) {
     link.textContent = '去体验';
     link.className = 'visit-btn';
     link.target = '_blank';
-    link.addEventListener('click', () => markVisited(tool));
+    link.addEventListener('click', (e) => {
+        e.stopPropagation();
+        markVisited(tool);
+    });
     info.appendChild(link);
 
     const ratingContainer = document.createElement('div');
@@ -285,7 +292,8 @@ function createToolCard(tool) {
     const rateBtn = document.createElement('button');
     rateBtn.textContent = '评分';
     rateBtn.className = 'rate-btn';
-    rateBtn.addEventListener('click', () => {
+    rateBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const value = prompt('请输入评分(0-100)：', tool.rating || '0');
         const num = parseInt(value, 10);
         if (!isNaN(num) && num >= 0 && num <= 100) {
