@@ -4,6 +4,6 @@
 
 This repository contains a static website for browsing AI tools. Tools can be filtered by clicking hashtag-style categories, searched by name or description, and rated on a 0–100 scale using a slider. Ratings are stored locally in your browser using `localStorage`.
 
-The dataset now lists ten popular AI tools. Each entry includes the company behind the tool, its country (shown with a flag), the year it was created, the current version, and an embedded logo so images never break.
+The dataset now lists fifteen popular AI tools, including several Chinese options. Each entry includes the company behind the tool, its country (shown with a flag), the year it was created, the current version, and an embedded logo so images never break.
 
 Open `index.html` in your browser to use the site. The layout is responsive and uses a grid of cards for each tool. Each card has a "去体验" button linking to the tool's website.

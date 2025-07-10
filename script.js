@@ -123,6 +123,66 @@ const tools = [
         logo: generateLogo('PX'),
         description: 'AI powered search and Q&A.',
         link: 'https://www.perplexity.ai'
+    },
+    {
+        id: 'ernie-bot',
+        name: '文心一言',
+        company: 'Baidu',
+        version: '4.0',
+        category: 'Chatbot',
+        country: '🇨🇳 CN',
+        created: '2023',
+        logo: generateLogo('EB'),
+        description: '百度的生成式对话模型。',
+        link: 'https://yiyan.baidu.com'
+    },
+    {
+        id: 'qwen',
+        name: '通义千问',
+        company: 'Alibaba',
+        version: '2.0',
+        category: 'Chatbot',
+        country: '🇨🇳 CN',
+        created: '2023',
+        logo: generateLogo('QW'),
+        description: '阿里巴巴推出的大语言模型。',
+        link: 'https://tongyi.aliyun.com'
+    },
+    {
+        id: 'spark',
+        name: '讯飞星火',
+        company: 'iFlytek',
+        version: '2.0',
+        category: 'Chatbot',
+        country: '🇨🇳 CN',
+        created: '2023',
+        logo: generateLogo('SP'),
+        description: '科大讯飞研发的对话式AI。',
+        link: 'https://xinghuo.xfyun.cn'
+    },
+    {
+        id: 'sensechat',
+        name: '商汤日日新',
+        company: 'SenseTime',
+        version: '1.0',
+        category: 'Chatbot',
+        country: '🇨🇳 CN',
+        created: '2023',
+        logo: generateLogo('SC'),
+        description: '商汤科技的多模态聊天机器人。',
+        link: 'https://www.sensetime.com'
+    },
+    {
+        id: '360brain',
+        name: '360 智脑',
+        company: '360',
+        version: '1.0',
+        category: 'Chatbot',
+        country: '🇨🇳 CN',
+        created: '2023',
+        logo: generateLogo('36'),
+        description: '360 集团推出的大模型助手。',
+        link: 'https://ai.360.cn'
     }
 ];
 
