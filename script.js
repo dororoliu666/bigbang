@@ -43,7 +43,6 @@ function loadRatings() {
 function saveRating(tool, rating) {
     localStorage.setItem('rating_' + tool.id, rating);
     tool.rating = rating;
-    renderTools();
 }
 
 function getCategories() {
@@ -94,18 +93,27 @@ function renderTools() {
             link.target = '_blank';
             info.appendChild(link);
 
+            const ratingContainer = document.createElement('div');
+            ratingContainer.className = 'rating-container';
+
             const rating = document.createElement('input');
-            rating.type = 'number';
+            rating.type = 'range';
             rating.min = 0;
             rating.max = 100;
             rating.value = tool.rating || 0;
-            rating.className = 'rating-input';
+            rating.className = 'rating-slider';
+            rating.addEventListener('input', () => {
+                ratingDisplay.textContent = rating.value + ' %';
+            });
             rating.addEventListener('change', () => saveRating(tool, rating.value));
-            info.appendChild(rating);
+            ratingContainer.appendChild(rating);
 
             const ratingDisplay = document.createElement('span');
-            ratingDisplay.textContent = ' %';
-            info.appendChild(ratingDisplay);
+            ratingDisplay.className = 'rating-value';
+            ratingDisplay.textContent = (tool.rating || 0) + ' %';
+            ratingContainer.appendChild(ratingDisplay);
+
+            info.appendChild(ratingContainer);
 
             div.appendChild(info);
             container.appendChild(div);
