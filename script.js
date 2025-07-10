@@ -188,6 +188,14 @@ const defaultTools = [
 
 let tools = [];
 
+function markVisited(tool) {
+    let ids = JSON.parse(localStorage.getItem('recent_tools') || '[]');
+    ids = ids.filter(id => id !== tool.id);
+    ids.unshift(tool.id);
+    ids = ids.slice(0, 10);
+    localStorage.setItem('recent_tools', JSON.stringify(ids));
+}
+
 async function loadTools() {
     try {
         const resp = await fetch('tools.json');
@@ -218,6 +226,80 @@ function getCategories() {
 }
 
 let selectedCategory = '';
+
+function createToolCard(tool) {
+    const div = document.createElement('div');
+    div.className = 'tool';
+
+    const img = document.createElement('img');
+    img.src = tool.logo;
+    div.appendChild(img);
+
+    const info = document.createElement('div');
+    info.className = 'tool-info';
+
+    const title = document.createElement('h3');
+    title.textContent = tool.name;
+    info.appendChild(title);
+
+    const company = document.createElement('p');
+    company.className = 'meta';
+    company.textContent = `Company: ${tool.company}`;
+    info.appendChild(company);
+
+    const country = document.createElement('p');
+    country.className = 'meta';
+    country.textContent = `Country: ${tool.country}`;
+    info.appendChild(country);
+
+    const version = document.createElement('p');
+    version.className = 'meta';
+    version.textContent = `Version: ${tool.version}`;
+    info.appendChild(version);
+
+    const created = document.createElement('p');
+    created.className = 'meta';
+    created.textContent = `Created: ${tool.created}`;
+    info.appendChild(created);
+
+    const desc = document.createElement('p');
+    desc.textContent = tool.description;
+    info.appendChild(desc);
+
+    const link = document.createElement('a');
+    link.href = tool.link;
+    link.textContent = '去体验';
+    link.className = 'visit-btn';
+    link.target = '_blank';
+    link.addEventListener('click', () => markVisited(tool));
+    info.appendChild(link);
+
+    const ratingContainer = document.createElement('div');
+    ratingContainer.className = 'rating-container';
+
+    const ratingDisplay = document.createElement('span');
+    ratingDisplay.className = 'rating-value';
+    ratingDisplay.textContent = (tool.rating || 0) + ' %';
+    ratingContainer.appendChild(ratingDisplay);
+
+    const rateBtn = document.createElement('button');
+    rateBtn.textContent = '评分';
+    rateBtn.className = 'rate-btn';
+    rateBtn.addEventListener('click', () => {
+        const value = prompt('请输入评分(0-100)：', tool.rating || '0');
+        const num = parseInt(value, 10);
+        if (!isNaN(num) && num >= 0 && num <= 100) {
+            saveRating(tool, num);
+            ratingDisplay.textContent = num + ' %';
+        }
+    });
+    ratingContainer.appendChild(rateBtn);
+
+    info.appendChild(ratingContainer);
+
+    div.appendChild(info);
+    return div;
+}
 
 function renderCategoryTags() {
     const container = document.getElementById('category-tags');
@@ -251,76 +333,20 @@ function renderTools() {
         .filter(t => (!category || t.category === category))
         .filter(t => t.name.toLowerCase().includes(search) || t.description.toLowerCase().includes(search))
         .forEach(tool => {
-            const div = document.createElement('div');
-            div.className = 'tool';
-
-            const img = document.createElement('img');
-            img.src = tool.logo;
-            div.appendChild(img);
-
-            const info = document.createElement('div');
-            info.className = 'tool-info';
-            const title = document.createElement('h3');
-            title.textContent = tool.name;
-            info.appendChild(title);
-
-            const company = document.createElement('p');
-            company.className = 'meta';
-            company.textContent = `Company: ${tool.company}`;
-            info.appendChild(company);
-
-            const country = document.createElement('p');
-            country.className = 'meta';
-            country.textContent = `Country: ${tool.country}`;
-            info.appendChild(country);
-
-            const version = document.createElement('p');
-            version.className = 'meta';
-            version.textContent = `Version: ${tool.version}`;
-            info.appendChild(version);
-
-            const created = document.createElement('p');
-            created.className = 'meta';
-            created.textContent = `Created: ${tool.created}`;
-            info.appendChild(created);
-
-            const desc = document.createElement('p');
-            desc.textContent = tool.description;
-            info.appendChild(desc);
-
-            const link = document.createElement('a');
-            link.href = tool.link;
-            link.textContent = '去体验';
-            link.className = 'visit-btn';
-            link.target = '_blank';
-            info.appendChild(link);
-
-            const ratingContainer = document.createElement('div');
-            ratingContainer.className = 'rating-container';
-
-            const ratingDisplay = document.createElement('span');
-            ratingDisplay.className = 'rating-value';
-            ratingDisplay.textContent = (tool.rating || 0) + ' %';
-            ratingContainer.appendChild(ratingDisplay);
-
-            const rateBtn = document.createElement('button');
-            rateBtn.textContent = '评分';
-            rateBtn.className = 'rate-btn';
-            rateBtn.addEventListener('click', () => {
-                const value = prompt('请输入评分(0-100)：', tool.rating || '0');
-                const num = parseInt(value, 10);
-                if (!isNaN(num) && num >= 0 && num <= 100) {
-                    saveRating(tool, num);
-                    ratingDisplay.textContent = num + ' %';
-                }
-            });
-            ratingContainer.appendChild(rateBtn);
-
-            info.appendChild(ratingContainer);
-
-            div.appendChild(info);
-            container.appendChild(div);
+            const card = createToolCard(tool);
+            container.appendChild(card);
         });
+}
+
+function renderRecentTools() {
+    const container = document.getElementById('recent-container');
+    container.innerHTML = '';
+    const ids = JSON.parse(localStorage.getItem('recent_tools') || '[]');
+    const recent = ids.map(id => tools.find(t => t.id === id)).filter(Boolean);
+    recent.forEach(tool => {
+        const card = createToolCard(tool);
+        container.appendChild(card);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -329,4 +355,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderCategoryTags();
     renderTools();
     document.getElementById("search").addEventListener("input", renderTools);
+
+    document.querySelectorAll('.sidebar li').forEach(li => {
+        li.addEventListener('click', () => {
+            document.querySelectorAll('.sidebar li').forEach(n => n.classList.remove('active'));
+            li.classList.add('active');
+            const view = li.dataset.view;
+            if (view === 'recent') {
+                document.getElementById('category-tags').style.display = 'none';
+                document.querySelector('.controls').style.display = 'none';
+                document.getElementById('tools-container').style.display = 'none';
+                document.getElementById('recent-container').style.display = '';
+                renderRecentTools();
+            } else {
+                document.getElementById('category-tags').style.display = '';
+                document.querySelector('.controls').style.display = '';
+                document.getElementById('tools-container').style.display = '';
+                document.getElementById('recent-container').style.display = 'none';
+                renderTools();
+            }
+        });
+    });
 });

@@ -6,6 +6,34 @@ body {
     color: #333;
 }
 
+.layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 180px;
+    margin-right: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+.sidebar li.active {
+    background: #0066cc;
+    color: #fff;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;

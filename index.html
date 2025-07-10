@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>We know Tools</h1>
-        <p class="tagline">专为设计师提供的AI 工具导航</p>
-        <div class="controls">
-            <input type="text" id="search" placeholder="Search tools...">
+    <div class="layout">
+        <nav class="sidebar">
+            <ul>
+                <li data-view="home" class="active">首页</li>
+                <li data-view="recent">我常用的</li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>We know Tools</h1>
+            <p class="tagline">专为设计师提供的AI 工具导航</p>
+            <div class="controls">
+                <input type="text" id="search" placeholder="Search tools...">
+            </div>
+            <div id="category-tags" class="category-tags"></div>
+            <div id="tools-container" class="tools-grid"></div>
+            <div id="recent-container" class="tools-grid" style="display:none"></div>
         </div>
-        <div id="category-tags" class="category-tags"></div>
-        <div id="tools-container" class="tools-grid"></div>
     </div>
 
     <script src="script.js"></script>
