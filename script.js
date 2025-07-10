@@ -9,6 +9,8 @@ const tools = [
         name: 'ChatGPT',
         company: 'OpenAI',
         version: '4',
+        country: '🇺🇸 US',
+        created: '2022',
         category: 'Chatbot',
         logo: generateLogo('CG'),
         description: "OpenAI's conversational AI.",
@@ -19,6 +21,8 @@ const tools = [
         name: 'DALL·E 3',
         company: 'OpenAI',
         version: '3',
+        country: '🇺🇸 US',
+        created: '2023',
         category: 'Image Generation',
         logo: generateLogo('DE'),
         description: 'Image generation from text prompts.',
@@ -30,6 +34,8 @@ const tools = [
         company: 'Stability AI',
         version: '1.5',
         category: 'Image Generation',
+        country: '🇬🇧 UK',
+        created: '2022',
         logo: generateLogo('SD'),
         description: 'Text to image generation model.',
         link: 'https://stability.ai'
@@ -40,6 +46,8 @@ const tools = [
         company: 'Midjourney',
         version: '5',
         category: 'Image Generation',
+        country: '🇺🇸 US',
+        created: '2022',
         logo: generateLogo('MJ'),
         description: 'AI-based art generation service.',
         link: 'https://www.midjourney.com'
@@ -50,6 +58,8 @@ const tools = [
         company: 'Google',
         version: '2',
         category: 'Chatbot',
+        country: '🇺🇸 US',
+        created: '2023',
         logo: generateLogo('BA'),
         description: "Google's generative AI service.",
         link: 'https://bard.google.com'
@@ -60,6 +70,8 @@ const tools = [
         company: 'GitHub',
         version: '1.0',
         category: 'Coding Assistant',
+        country: '🇺🇸 US',
+        created: '2021',
         logo: generateLogo('GP'),
         description: 'Code completion assistant for developers.',
         link: 'https://github.com/features/copilot'
@@ -70,6 +82,8 @@ const tools = [
         company: 'Adobe',
         version: 'beta',
         category: 'Image Generation',
+        country: '🇺🇸 US',
+        created: '2023',
         logo: generateLogo('FF'),
         description: 'Creative generative AI tools by Adobe.',
         link: 'https://www.adobe.com/sensei/generative-ai'
@@ -80,6 +94,8 @@ const tools = [
         company: 'OpenAI',
         version: '1.0',
         category: 'Speech Recognition',
+        country: '🇺🇸 US',
+        created: '2022',
         logo: generateLogo('WH'),
         description: 'Automatic speech recognition system.',
         link: 'https://openai.com'
@@ -90,6 +106,8 @@ const tools = [
         company: 'Anthropic',
         version: '2',
         category: 'Chatbot',
+        country: '🇺🇸 US',
+        created: '2023',
         logo: generateLogo('CL'),
         description: 'Anthropic\'s helpful AI assistant.',
         link: 'https://www.anthropic.com'
@@ -100,6 +118,8 @@ const tools = [
         company: 'Perplexity',
         version: '1.0',
         category: 'Search',
+        country: '🇺🇸 US',
+        created: '2022',
         logo: generateLogo('PX'),
         description: 'AI powered search and Q&A.',
         link: 'https://www.perplexity.ai'
@@ -175,10 +195,20 @@ function renderTools() {
             company.textContent = `Company: ${tool.company}`;
             info.appendChild(company);
 
+            const country = document.createElement('p');
+            country.className = 'meta';
+            country.textContent = `Country: ${tool.country}`;
+            info.appendChild(country);
+
             const version = document.createElement('p');
             version.className = 'meta';
             version.textContent = `Version: ${tool.version}`;
             info.appendChild(version);
+
+            const created = document.createElement('p');
+            created.className = 'meta';
+            created.textContent = `Created: ${tool.created}`;
+            info.appendChild(created);
 
             const desc = document.createElement('p');
             desc.textContent = tool.description;
@@ -186,7 +216,8 @@ function renderTools() {
 
             const link = document.createElement('a');
             link.href = tool.link;
-            link.textContent = 'Visit';
+            link.textContent = '去体验';
+            link.className = 'visit-btn';
             link.target = '_blank';
             info.appendChild(link);
 
