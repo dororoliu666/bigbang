@@ -3,7 +3,7 @@ function generateLogo(text) {
     return 'data:image/svg+xml,' + encodeURIComponent(svg);
 }
 
-const tools = [
+const defaultTools = [
     {
         id: 'chatgpt',
         name: 'ChatGPT',
@@ -186,6 +186,19 @@ const tools = [
     }
 ];
 
+let tools = [];
+
+async function loadTools() {
+    try {
+        const resp = await fetch('tools.json');
+        if (!resp.ok) throw new Error('failed');
+        tools = await resp.json();
+    } catch (e) {
+        console.warn('Using built-in dataset:', e);
+        tools = defaultTools;
+    }
+}
+
 function loadRatings() {
     tools.forEach(tool => {
         const saved = localStorage.getItem('rating_' + tool.id);
@@ -310,7 +323,8 @@ function renderTools() {
         });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadTools();
     loadRatings();
     renderCategoryTags();
     renderTools();

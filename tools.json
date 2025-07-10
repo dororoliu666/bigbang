@@ -1,0 +1,167 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "company": "OpenAI",
+    "version": "4",
+    "country": "🇺🇸 US",
+    "created": "2022",
+    "category": "Chatbot",
+    "description": "OpenAI's conversational AI.",
+    "link": "https://openai.com"
+  },
+  {
+    "id": "dalle-3",
+    "name": "DALL·E 3",
+    "company": "OpenAI",
+    "version": "3",
+    "country": "🇺🇸 US",
+    "created": "2023",
+    "category": "Image Generation",
+    "description": "Image generation from text prompts.",
+    "link": "https://openai.com/dall-e-3"
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "company": "Stability AI",
+    "version": "1.5",
+    "category": "Image Generation",
+    "country": "🇬🇧 UK",
+    "created": "2022",
+    "description": "Text to image generation model.",
+    "link": "https://stability.ai"
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "company": "Midjourney",
+    "version": "5",
+    "category": "Image Generation",
+    "country": "🇺🇸 US",
+    "created": "2022",
+    "description": "AI-based art generation service.",
+    "link": "https://www.midjourney.com"
+  },
+  {
+    "id": "bard",
+    "name": "Bard",
+    "company": "Google",
+    "version": "2",
+    "category": "Chatbot",
+    "country": "🇺🇸 US",
+    "created": "2023",
+    "description": "Google's generative AI service.",
+    "link": "https://bard.google.com"
+  },
+  {
+    "id": "copilot",
+    "name": "GitHub Copilot",
+    "company": "GitHub",
+    "version": "1.0",
+    "category": "Coding Assistant",
+    "country": "🇺🇸 US",
+    "created": "2021",
+    "description": "Code completion assistant for developers.",
+    "link": "https://github.com/features/copilot"
+  },
+  {
+    "id": "firefly",
+    "name": "Adobe Firefly",
+    "company": "Adobe",
+    "version": "beta",
+    "category": "Image Generation",
+    "country": "🇺🇸 US",
+    "created": "2023",
+    "description": "Creative generative AI tools by Adobe.",
+    "link": "https://www.adobe.com/sensei/generative-ai"
+  },
+  {
+    "id": "whisper",
+    "name": "Whisper",
+    "company": "OpenAI",
+    "version": "1.0",
+    "category": "Speech Recognition",
+    "country": "🇺🇸 US",
+    "created": "2022",
+    "description": "Automatic speech recognition system.",
+    "link": "https://openai.com"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "company": "Anthropic",
+    "version": "2",
+    "category": "Chatbot",
+    "country": "🇺🇸 US",
+    "created": "2023",
+    "description": "Anthropic's helpful AI assistant.",
+    "link": "https://www.anthropic.com"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "company": "Perplexity",
+    "version": "1.0",
+    "category": "Search",
+    "country": "🇺🇸 US",
+    "created": "2022",
+    "description": "AI powered search and Q&A.",
+    "link": "https://www.perplexity.ai"
+  },
+  {
+    "id": "ernie-bot",
+    "name": "文心一言",
+    "company": "Baidu",
+    "version": "4.0",
+    "category": "Chatbot",
+    "country": "🇨🇳 CN",
+    "created": "2023",
+    "description": "百度的生成式对话模型。",
+    "link": "https://yiyan.baidu.com"
+  },
+  {
+    "id": "qwen",
+    "name": "通义千问",
+    "company": "Alibaba",
+    "version": "2.0",
+    "category": "Chatbot",
+    "country": "🇨🇳 CN",
+    "created": "2023",
+    "description": "阿里巴巴推出的大语言模型。",
+    "link": "https://tongyi.aliyun.com"
+  },
+  {
+    "id": "spark",
+    "name": "讯飞星火",
+    "company": "iFlytek",
+    "version": "2.0",
+    "category": "Chatbot",
+    "country": "🇨🇳 CN",
+    "created": "2023",
+    "description": "科大讯飞研发的对话式AI。",
+    "link": "https://xinghuo.xfyun.cn"
+  },
+  {
+    "id": "sensechat",
+    "name": "商汤日日新",
+    "company": "SenseTime",
+    "version": "1.0",
+    "category": "Chatbot",
+    "country": "🇨🇳 CN",
+    "created": "2023",
+    "description": "商汤科技的多模态聊天机器人。",
+    "link": "https://www.sensetime.com"
+  },
+  {
+    "id": "360brain",
+    "name": "360 智脑",
+    "company": "360",
+    "version": "1.0",
+    "category": "Chatbot",
+    "country": "🇨🇳 CN",
+    "created": "2023",
+    "description": "360 集团推出的大模型助手。",
+    "link": "https://ai.360.cn"
+  }
+]
