@@ -205,6 +205,12 @@ async function loadTools() {
         console.warn('Using built-in dataset:', e);
         tools = defaultTools;
     }
+    tools.forEach(t => {
+        if (!t.logo) {
+            const initials = t.name.replace(/[^\w]/g, '').slice(0, 2).toUpperCase();
+            t.logo = generateLogo(initials);
+        }
+    });
 }
 
 function loadRatings() {
@@ -236,7 +242,7 @@ function createToolCard(tool) {
     });
 
     const img = document.createElement('img');
-    img.src = tool.logo;
+    img.src = tool.logo || generateLogo(tool.name.replace(/[^\w]/g, '').slice(0,2).toUpperCase());
     div.appendChild(img);
 
     const info = document.createElement('div');

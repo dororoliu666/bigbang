@@ -2,6 +2,11 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs/promises');
 
+function generateLogo(text) {
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><rect width='100%' height='100%' fill='#e6e6e6'/><text x='50%' y='50%' font-size='20' text-anchor='middle' fill='#333' dy='.35em'>${text}</text></svg>`;
+  return 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+
 const BASE = 'https://ai-bot.cn';
 
 async function fetchCategories() {
@@ -40,6 +45,21 @@ async function fetchToolDetail(tool) {
   const version = $('.site-version').text().trim();
   const country = $('.site-country').text().trim();
   const created = $('.site-date').text().trim();
+  let logoData;
+  if (logo) {
+    try {
+      const imgUrl = logo.startsWith('http') ? logo : BASE + logo;
+      const resp = await axios.get(imgUrl, { responseType: 'arraybuffer' });
+      const type = resp.headers['content-type'] || 'image/png';
+      logoData = `data:${type};base64,` + Buffer.from(resp.data).toString('base64');
+    } catch (e) {
+      logoData = null;
+    }
+  }
+  if (!logoData) {
+    const initials = tool.name.replace(/[^\w]/g, '').slice(0, 2).toUpperCase();
+    logoData = generateLogo(initials);
+  }
   return {
     id: tool.link.split('/').pop().replace('.html',''),
     name: tool.name,
@@ -48,7 +68,7 @@ async function fetchToolDetail(tool) {
     country,
     created,
     category: tool.category,
-    logo,
+    logo: logoData,
     description: desc,
     link: tool.link
   };

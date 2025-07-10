@@ -8,7 +8,8 @@
     "created": "2022",
     "category": "Chatbot",
     "description": "OpenAI's conversational AI.",
-    "link": "https://openai.com"
+    "link": "https://openai.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3ECG%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "dalle-3",
@@ -19,7 +20,8 @@
     "created": "2023",
     "category": "Image Generation",
     "description": "Image generation from text prompts.",
-    "link": "https://openai.com/dall-e-3"
+    "link": "https://openai.com/dall-e-3",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EDE%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "stable-diffusion",
@@ -30,7 +32,8 @@
     "country": "🇬🇧 UK",
     "created": "2022",
     "description": "Text to image generation model.",
-    "link": "https://stability.ai"
+    "link": "https://stability.ai",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3ESD%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "midjourney",
@@ -41,7 +44,8 @@
     "country": "🇺🇸 US",
     "created": "2022",
     "description": "AI-based art generation service.",
-    "link": "https://www.midjourney.com"
+    "link": "https://www.midjourney.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EMJ%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "bard",
@@ -52,7 +56,8 @@
     "country": "🇺🇸 US",
     "created": "2023",
     "description": "Google's generative AI service.",
-    "link": "https://bard.google.com"
+    "link": "https://bard.google.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EBA%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "copilot",
@@ -63,7 +68,8 @@
     "country": "🇺🇸 US",
     "created": "2021",
     "description": "Code completion assistant for developers.",
-    "link": "https://github.com/features/copilot"
+    "link": "https://github.com/features/copilot",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EGP%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "firefly",
@@ -74,7 +80,8 @@
     "country": "🇺🇸 US",
     "created": "2023",
     "description": "Creative generative AI tools by Adobe.",
-    "link": "https://www.adobe.com/sensei/generative-ai"
+    "link": "https://www.adobe.com/sensei/generative-ai",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EFF%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "whisper",
@@ -85,7 +92,8 @@
     "country": "🇺🇸 US",
     "created": "2022",
     "description": "Automatic speech recognition system.",
-    "link": "https://openai.com"
+    "link": "https://openai.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EWH%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "claude",
@@ -96,7 +104,8 @@
     "country": "🇺🇸 US",
     "created": "2023",
     "description": "Anthropic's helpful AI assistant.",
-    "link": "https://www.anthropic.com"
+    "link": "https://www.anthropic.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3ECL%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "perplexity",
@@ -107,7 +116,8 @@
     "country": "🇺🇸 US",
     "created": "2022",
     "description": "AI powered search and Q&A.",
-    "link": "https://www.perplexity.ai"
+    "link": "https://www.perplexity.ai",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EPX%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "ernie-bot",
@@ -118,7 +128,8 @@
     "country": "🇨🇳 CN",
     "created": "2023",
     "description": "百度的生成式对话模型。",
-    "link": "https://yiyan.baidu.com"
+    "link": "https://yiyan.baidu.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EEB%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "qwen",
@@ -129,7 +140,8 @@
     "country": "🇨🇳 CN",
     "created": "2023",
     "description": "阿里巴巴推出的大语言模型。",
-    "link": "https://tongyi.aliyun.com"
+    "link": "https://tongyi.aliyun.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3EQW%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "spark",
@@ -140,7 +152,8 @@
     "country": "🇨🇳 CN",
     "created": "2023",
     "description": "科大讯飞研发的对话式AI。",
-    "link": "https://xinghuo.xfyun.cn"
+    "link": "https://xinghuo.xfyun.cn",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3ESP%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "sensechat",
@@ -151,7 +164,8 @@
     "country": "🇨🇳 CN",
     "created": "2023",
     "description": "商汤科技的多模态聊天机器人。",
-    "link": "https://www.sensetime.com"
+    "link": "https://www.sensetime.com",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3ESC%3C%2Ftext%3E%3C%2Fsvg%3E"
   },
   {
     "id": "360brain",
@@ -162,6 +176,7 @@
     "country": "🇨🇳 CN",
     "created": "2023",
     "description": "360 集团推出的大模型助手。",
-    "link": "https://ai.360.cn"
+    "link": "https://ai.360.cn",
+    "logo": "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'60'%20height%3D'60'%3E%3Crect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'%23e6e6e6'%2F%3E%3Ctext%20x%3D'50%25'%20y%3D'50%25'%20font-size%3D'20'%20text-anchor%3D'middle'%20fill%3D'%23333'%20dy%3D'.35em'%3E36%3C%2Ftext%3E%3C%2Fsvg%3E"
   }
 ]
